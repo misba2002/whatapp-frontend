@@ -1,12 +1,67 @@
-# React + Vite
+# WhatsApp Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack WhatsApp clone application with React frontend and Node.js/Express backend.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Frontend: [https://whatapp-frontend.onrender.com/](https://whatapp-frontend.onrender.com/)
+- Backend: [https://whatsapp-backend-l8tf.onrender.com/](https://whatsapp-backend-l8tf.onrender.com/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Real-time chat using Socket.IO
+- Chat list and message window
+- Message status updates
+- Responsive UI built with React
+
+## Tech Stack
+
+- Frontend: React, Socket.IO-client, Tailwind CSS (or your styling)
+- Backend: Node.js, Express, Socket.IO, MongoDB (assumed)
+
+## Deployment
+
+- Frontend deployed on Render as a Static Site
+- Backend deployed on Render as a Web Service
+
+## Usage
+
+1. Open the frontend URL in your browser.
+2. The frontend connects to the backend API and Socket.IO server.
+3. Start chatting!
+
+## Environment Variables
+
+- The frontend uses the backend URL (hardcoded or via environment variable).
+- The backend uses MongoDB connection string and other config variables.
+
+---
+
+## Running Locally
+
+### Prerequisites
+
+- Node.js and npm installed
+- MongoDB instance running or MongoDB Atlas URI
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+### Backend
+
+cd backend
+npm install
+# Set your environment variables (e.g., MONGODB_URI) in a .env file
+npm start
+The backend runs on http://localhost:5000 (or your configured port).
+
+Environment Variables
+Frontend uses VITE_BACKEND_URL (optional if hardcoded)
+
+Backend requires MongoDB connection string and other config in .env
+
+
